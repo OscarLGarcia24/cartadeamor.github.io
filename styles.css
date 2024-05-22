@@ -1,0 +1,173 @@
+/* file: styles.css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4c2c2;
+  background-image: url('rosas.jpg');
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.envelope {
+  position: relative;
+  width: 380px;
+  height: auto;
+  background-color: #fff;
+  border: 2px solid #f4c2c2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.title-container {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f4c2c2;
+}
+.title-container.visible {
+  width: 100%;
+  height: 50%;
+  opacity: 1;
+}
+.buttons {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  border: none; 
+  color: rgba(244, 194, 194, 1); 
+  padding: 14px 28px; 
+  cursor: pointer; 
+  border-radius: 5px;   
+}
+
+.button {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 5px 15px;
+  background-color: rgba(244, 194, 194, 1);
+  color: rgba(244, 194, 194, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}
+
+.button:hover {
+  background-color: #e6a7a7;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 380px;
+  height: 400px;
+  background-color: #fff;
+  border: 2px solid #f4c2c2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+  transition: transform 0.3s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+
+.card.visible {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #f4c2c2;
+}
+
+.close-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.link {
+  color:#f4c2c2;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  background-color: #eee;
+}
+
+.link:active {
+  background-color: #ccc;
+}
+.open-botton {
+  background-color: #04AA6D;
+} 
+.open-botton:hover {
+  background-color: #46a049;
+}
+
+@media (max-width: 600px) {
+  .envelope {
+    width: 90vw;
+    height: auto;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .buttons {
+    bottom: 10px;
+  }
+
+  .button {
+    padding: 5px 10px;
+  }
+
+  .card {
+    width: 90vw;
+    height: 60vh;
+  }
+
+  .message {
+    font-size: 2rem;
+  }
+
+  .close-button {
+    bottom: 5px;
+    right: 5px;
+  }
+}
